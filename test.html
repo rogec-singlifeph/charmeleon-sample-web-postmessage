@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample</title>
+</head>
+<body>
+
+<h1>Press the button below to test:</h1>
+<button type="submit" value="Submit" onclick="onPressTest();">Submit</button>
+
+<script type="text/javascript">
+	function onPressTest() {
+		console.log('WOW');
+		if (window.ReactNativeWebView) {
+			window.ReactNativeWebView.postMessage(JSON.stringify(window.location));
+		}
+	}
+</script>
+</body>
+</html>
